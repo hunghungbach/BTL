@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.banner {
+    width: 20%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    background-color: grey;
+    height: 590px;
+    line-height: 5000px;
+    position: relative;
+}
+
+.yellow { 
+    background-color: yellow;
+    clip-path: polygon(0 0, 90% 0%, 90% 100%, 0% 75%);
+}
+.green { 
+    background-color: green;
+    clip-path: polygon(0 0, 0 100%, 45% 75%, 90% 100%, 90% 100%, 90% 0%);
+}
+.blue { 
+    background-color: blue;
+    clip-path: polygon(0 0, 0 100%, 45% 75%, 90% 100%, 90% 100%, 90% 0%);
+
+}
+.orange { 
+    background-color: orange;
+    clip-path: polygon(0 0, 90% 0%, 90% 75%, 0% 100%);
+}
+
+.about-us {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.column {
+    width: 30%;
+    border-right: 2px solid #110f0fa0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+}
+.column h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: auto;
+}
+
+.column:last-child {
+    border-right: none;
+}
+
+.column p {
+    flex-grow: 1;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+footer div {
+    width: 30%;
+    text-align: center;
+}
