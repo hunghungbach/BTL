@@ -12,30 +12,37 @@ header {
 .banner {
     width: 20%;
     text-align: center;
-    padding: 20px;
+    padding: 0;
     color: white;
-    background-color: grey;
     height: 590px;
-    line-height: 5000px;
     position: relative;
+    overflow: hidden;
 }
 
-.yellow { 
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.My {
     background-color: yellow;
-    clip-path: polygon(0 0, 90% 0%, 90% 100%, 0% 75%);
+    clip-path: polygon(0 0, 90% 0, 90% 100%, 0% 75%);
 }
-.green { 
-    background-color: green;
-    clip-path: polygon(0 0, 0 100%, 45% 75%, 90% 100%, 90% 100%, 90% 0%);
-}
-.blue { 
-    background-color: blue;
-    clip-path: polygon(0 0, 0 100%, 45% 75%, 90% 100%, 90% 100%, 90% 0%);
 
+.Son {
+    background-color: green;
+    clip-path: polygon(0 0, 0 100%, 45% 75%, 90% 100%, 90% 0%);
 }
-.orange { 
+
+.Hung {
+    background-color: blue;
+    clip-path: polygon(0 0, 0 100%, 45% 75%, 90% 100%, 90% 0%);
+}
+
+.Ki {
     background-color: orange;
-    clip-path: polygon(0 0, 90% 0%, 90% 75%, 0% 100%);
+    clip-path: polygon(0 0, 90% 0, 90% 75%, 0% 100%);
 }
 
 .about-us {
@@ -47,10 +54,11 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    align-items: center;
 }
 
 .column {
-    width: 30%;
+    width: 33.3333%;
     border-right: 2px solid #110f0fa0;
     display: flex;
     flex-direction: column;
@@ -58,6 +66,7 @@ header {
     justify-content: center;
     min-height: 150px;
 }
+
 .column h2 {
     width: 100%;
     text-align: center;
@@ -71,7 +80,7 @@ header {
 .column p {
     flex-grow: 1;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
     margin: 0;
 }
@@ -85,6 +94,33 @@ footer {
 }
 
 footer div {
-    width: 30%;
+    width: 33.3333%;
     text-align: center;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105%;
+    background-image: url('https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/457278773_1179886913223418_191696695421720640_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFpK7apPhtnwcrqSLLwjfQPtQfqg6kdaPu1B-qDqR1o-3TqUyBK4u5XV6S_NWwfP81tTEgssBFitVXzWzj-5cir&_nc_ohc=FOcUSKPYnWAQ7kNvgEjlbEV&_nc_zt=23&_nc_ht=scontent.fhan14-1.fna&_nc_gid=AhSV7sGyyqRAbjeX8rYrH5G&oh=00_AYAdsnjbVGIP7Iw7jPbez_6hBWXK5gvO1Nmk-gOdWlFXQA&oe=67219B19');
+    background-size: cover;
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
