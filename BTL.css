@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dancing Script', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+.banner {
+    width: 20%;
+    text-align: center;
+    padding: 0;
+    color: white;
+    height: 590px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.banner img {
+    width: 310px;
+    height: 590px;
+    object-fit: cover;
+}
+
+.My {
+    background-color: yellow;
+    clip-path: polygon(0 0, 90% 0, 90% 100%, 0% 75%);
+}
+
+.Son {
+    background-color: green;
+    clip-path: polygon(0 0, 0 100%, 45% 75%, 90% 100%, 90% 0%);
+}
+
+.Hung {
+    background-color: blue;
+    clip-path: polygon(0 0, 0 100%, 45% 75%, 90% 100%, 90% 0%);
+}
+
+.Ki {
+    background-color: orange;
+    clip-path: polygon(0 0, 90% 0, 90% 75%, 0% 100%);
+}
+
+.about-us {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.about-us h1{
+    font-size: 40px;
+}
+
+.about-us p{
+    font-size: 20px;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+.column {
+    width: 33.3333%;
+    border-right: 2px solid #110f0fa0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+}
+
+.column h2 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: auto;
+}
+
+.column:last-child {
+    border-right: none;
+}
+
+.column p {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+footer div {
+    width: 33.3333%;
+    text-align: center;
+}
+
+.gradient-overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+body::before, body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    transition: opacity 1.5s ease-in-out;
+    opacity: 0;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--background-image-1);
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--background-image-2);
+    z-index: -2;
+    opacity: 1; /* Đảm bảo ảnh thứ hai luôn sẵn sàng */
+    transition: opacity 1.5s ease-in-out;
+}
+
+.fade::before {
+    opacity: 0;
+}
+
+.fade::after {
+    opacity: 1;
+}
+
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    clip-path: circle(0% at var(--click-x) var(--click-y));
+    transition: clip-path 0.7s ease;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+}
+
+.overlay.show {
+    clip-path: circle(150% at var(--click-x) var(--click-y));
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 50%;
+    background-position: 20%;
+    display: none;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    clip-path: circle(0% at var(--x) var(--y));
+}
+
+.overlay.active {
+    display: block;
+    opacity: 1;
+    animation: expand-circle 2s forwards;
+}
+
+@keyframes expand-circle {
+    from {
+        clip-path: circle(0% at var(--x) var(--y));
+    }
+    to {
+        clip-path: circle(150% at var(--x) var(--y));
+    }
+}
+
+.black-layer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 87% 50%, transparent 25%, rgb(0, 0, 0) 31%);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.sticker {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 200px;
+    height: auto;
+    z-index: 10;
+}
+
+.profile-content {
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+    z-index: 10;
+}
+
+.profile-content h2 {
+    font-size: 50px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+}
+
+.profile-content p {
+    font-size: 17px;
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    max-width: 80%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.back-button {
+    position: fixed;
+    bottom: 20px; /* Khoảng cách từ đáy màn hình */
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg); /* Xoay mũi tên theo chiều dọc */
+    z-index: 100; /* Đảm bảo nút nằm trên cùng */
+    background-color: rgba(255, 255, 255, 0.8); /* Nền mờ */
+    border: none; /* Xóa viền */
+    border-radius: 5px; /* Bo tròn góc */
+    padding: 10px 15px; /* Khoảng cách bên trong */
+    cursor: pointer; /* Hiệu ứng con trỏ khi di chuột */
+}
+
+.back-button.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.dancing-script {
+  font-family: "Dancing Script", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.custom-link {
+    color: #FFF5CD;
+}
+
+a.custom-link:hover {
+    color: #B7E0FF;
+}
+
+:root {
+    --background-image-1: url("https://tl.cdnchinhphu.vn/344445545208135680/2022/10/11/dai-hoc-thu-do-16654910570421220818521.png");
+    --background-image-2: url("https://cafefcdn.com/203337114487263232/2022/10/30/photo-1-16671039984241626240805.jpg");
+}
