@@ -77,7 +77,7 @@ backButton.addEventListener('click', () => {
 const backgrounds = [
     'url("https://tl.cdnchinhphu.vn/344445545208135680/2022/10/11/dai-hoc-thu-do-16654910570421220818521.png")',
     'url("https://cafefcdn.com/203337114487263232/2022/10/30/photo-1-16671039984241626240805.jpg")',
-    'url("blob:https://www.messenger.com/8bbd929b-295c-4df0-a7a6-24a2c45f6b39")',
+    'url("https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-6/465367703_1225254418686667_6173430362782329008_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGu4qFQz64DCsWA5hTNSZOOKEtMs4ppCjIoS0yzimkKMjFJcO8qlfp7s_yJr0hfjyBGf83oUgt3r0PP91pbdQ3l&_nc_ohc=3GLVPSqKQMkQ7kNvgFSY7aZ&_nc_zt=23&_nc_ht=scontent.fhan14-2.fna&_nc_gid=AQ5dt4qhBu-bKEbJSjP3Lip&oh=00_AYD-GGhVcyjlttzxGaW5Z7j_eD4JiwiNnVhp_B8MpKz9wg&oe=672A667C")',
     'url("https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/464788723_1224476632097779_6069562797488215862_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeGSCe7SR8A9T2_4wJ9WGCmiI022K8SUik8jTbYrxJSKTywIzDx77_tZJTVKXXEjYsLYoQuQzXza8U8cWB7wxWsK&_nc_ohc=IrYYAs_dOWIQ7kNvgGB8tT1&_nc_zt=23&_nc_ht=scontent.fhan2-3.fna&_nc_gid=ANU1s-H2T0Ipd9dv14ArfTP&oh=00_AYC0jT1oOX2uI_hqG5gtKZKrqh4m-dbes11efVIencz5Xw&oe=67298FAF")',
     'url("https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-6/464788723_1224476632097779_6069562797488215862_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeGSCe7SR8A9T2_4wJ9WGCmiI022K8SUik8jTbYrxJSKTywIzDx77_tZJTVKXXEjYsLYoQuQzXza8U8cWB7wxWsK&_nc_ohc=IrYYAs_dOWIQ7kNvgGB8tT1&_nc_zt=23&_nc_ht=scontent.fhan2-3.fna&_nc_gid=ANU1s-H2T0Ipd9dv14ArfTP&oh=00_AYC0jT1oOX2uI_hqG5gtKZKrqh4m-dbes11efVIencz5Xw&oe=67298FAF")'
 ];
